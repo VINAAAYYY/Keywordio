@@ -11,5 +11,6 @@ urlpatterns = [
 
     #views
     path('' , homepage.as_view(), name="homepage"),
-    path('add/', addBook, name="add")
+    path('add/', addBook, name="add"),
+    path('preview/', preview, name="preview"),
 ]

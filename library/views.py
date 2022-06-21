@@ -52,3 +52,11 @@ def addBook(request):
     form = bookForm()
     context = {'form' : form, 'm':False}
     return render(request, 'form.html', context)
+
+def preview(request):
+    permission_classes = [AllowAny]
+    id = request.GET.get('id')
+    obj = Books.objects.get(id=id)
+    form = bookForm(instance=obj)
+    context = {'form' : form}
+    return render(request, 'preview.html', context)
