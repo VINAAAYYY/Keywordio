@@ -22,24 +22,46 @@
 6. The urls.py has all THIS APP urls while the urls.py in base directory has the application's urls.
 7. admin.py has the book models and abstract user model registered.
 
-# Ways to use:
+# Steps to use:
+
+Installed Python 3 required. This project uses version ```3.10.4```. Needs GIT installed.
+## Open the terminal 
+Install virtualenv
+~~~
+pip install virtualenv
+~~~
+Create a virtualenv
+~~~
+virtualenv venv
+~~~
+Move to the recently created directory using 
+~~~
+cd venv
+~~~
+Clone this repository.
 ~~~
  $ git clone https://github.com/VINAAAYYY/Keywordio.git
 ~~~
-Clone this repository.
-
-Open the terminal in the cloned directory and run the following commands in the terminal:
+Activate your virtual enviroment 
+~~~
+myenv\Scripts\activate
+~~~
+Install all dependencies of the project
+~~~
+pip install -r requirements.txt
+~~~
+Although the sqlite database is pushed still migrate files just for the sake of it.
 ~~~
  python manage.py makemigrations
  python manage.py migrate
 ~~~
+Create a super user. Enter your details so that you have the admin controls.
 ~~~
  python manage.py createsuperuser
 ~~~ 
-Enter your details so that you have the admin controls.
+Start the server
 ~~~
 python manage.py runserver
 ~~~
 This starts the server in 8000 port.
 You can visit `/admin` extention for the Django admin panel of this project.
-### The sqlite database is pushed to the branch. 
